@@ -158,6 +158,14 @@ def team_colors(team)
   end
 end
 
+def team_names
+  game_hash.map do |home_away, both_teams|
+    both_teams[:team_name]
+  end
+end
+
+
+
 def player_stats(player_name)
   game_hash.each do |team, info|
     info[:players].each do |player|
